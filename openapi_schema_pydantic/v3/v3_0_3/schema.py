@@ -464,6 +464,13 @@ class Schema(BaseModel):
     a string value can be used to contain the example with escaping where necessary.
     """
 
+    examples: Optional[Dict[str, Any]] = None
+    """
+    A free-form property to include examples of instances for this schema.
+    To represent examples that cannot be naturally represented in JSON or YAML,
+    a string value can be used to contain the example with escaping where necessary.
+    """
+
     deprecated: Optional[bool] = None
     """ 
     Specifies that a schema is deprecated and SHOULD be transitioned out of usage.
